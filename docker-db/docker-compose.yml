@@ -1,0 +1,27 @@
+services:
+  # Création du service BDD
+  mysql-blog:
+    # Sous-dossier contenant le Dockerfile 
+    build: ./db
+    # Nom de l'image créée à partir du Dockerfile
+    image: connexion-db
+    # Le nom du conteneur instancié
+    container_name: connexion-db
+    restart: 'always'
+    # Montage de volumes divers
+    volumes:
+      - ./db/dump:/docker-entrypoint-initdb.d
+    environment:
+      MARIADB_ROOT_PASSWORD: ultrasupersecuredpassword
+      MARIADB_DATABASE: connexion
+    ports:
+      - "9806:3306"
+
+# Variable d'environnement utilisables :
+# MYSQL_ROOT_PASSWORD
+# MYSQL_DATABASE
+# MYSQL_USER
+# MYSQL_PASSWORD
+# MYSQL_ALLOW_EMPTY_PASSWORD
+# MYSQL_RANDOM_ROOT_PASSWORD
+# MYSQL_ONETIME_PASSWORD

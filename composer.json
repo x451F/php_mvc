@@ -1,0 +1,22 @@
+{
+    "name": "afpa/connexion",
+    "description": "TP connexion sécurisée en MVC",
+    "type": "project",
+    "require-dev": {
+        "php": ">=8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Afpa\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ludovic Esperce",
+            "email": "ludovic.esperce@posteo.net"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

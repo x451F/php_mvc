@@ -1,0 +1,19 @@
+body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#login {
+    background-color: #000;
+    border-radius: 20px;
+    padding: 1%;    
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}   
+#title {
+    color: #FF1D8D!important;
+}
